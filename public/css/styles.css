@@ -4,3 +4,177 @@
 *:after {
   box-sizing: border-box;
 }
+
+div#wrapper {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  width: 90%;
+  margin-top: 3.3%;
+  margin-left: 6%;
+}
+
+header#top-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1% 0%;
+  width: 96%;
+}
+
+.siteName a{
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+
+#tools{
+  align-self: center;
+}
+
+#tools a{
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+
+header, main{
+  width: 90%;
+}
+
+nav{
+  width: 97%;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+nav li {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#delorian{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+#delorian img {
+  grid-column-start: 1;
+  min-width: 49%;
+  max-width: 70%;
+  margin: auto;
+  grid-column-end: 4;
+  grid-row-start: 1;
+}
+
+#delorian .glassCard{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  background: rgba(255, 255, 255, 0.8);
+  font-family: Arial, sans-serif;
+}
+
+.glassCard p {
+  font-size: 1em;
+  color: rgb(0, 112, 192);
+}
+
+.glassCard p b {
+  font-size: 1.2em;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.glassCard img{
+  box-shadow: 0px 0px 4px 1px gray;
+}
+
+.content section{
+  width: 100%;
+}
+
+.content section h3{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.content section ul {
+  line-height: 1.5em;
+  font-size: 1em;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.figure{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.images {
+  width: 65%;
+  height: 100%;
+  background-color: cornflowerblue;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  margin: 18px 0px;
+}
+
+.figcaption{
+  width: 65%;
+  text-align: center;
+}
+
+
+footer {
+  width: 96%;
+  text-align: left;
+}
+
+@media screen and (min-width: 700px) {
+  body{
+    background-image: url(/images/site/small_check.jpg);
+  }
+  .glassCard p {
+    font-size: 1.5em;
+    color: rgb(0, 112, 192);
+  }
+  
+  .glassCard p b {
+    font-size: 2.5em;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .content {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .content section{
+    width: 50%;
+  }
+  .content section ul {
+    line-height: 2.5em;
+    font-size: 1.5em;
+  }
+}
