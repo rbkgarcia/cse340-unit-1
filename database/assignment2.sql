@@ -235,3 +235,57 @@ VALUES   (
     5
   );
 
+--Data for table 'account'
+INSERT INTO public.account (
+    account_firstname, 
+    account_lastname, 
+    account_email,
+    account_password
+  )
+VALUES (
+  'Tony',
+  'Stark',
+  'tony@starkent.com',
+  'Iam1ronM@n'
+)
+
+--Update account table Tony type of account
+UPDATE 
+	account 
+SET 
+	account_type = 'Admin'
+WHERE 
+	account_firstname ='Tony'
+
+--Delete Tony record from account
+DELETE
+FROM
+  account
+WHERE
+  account_firstname ='Tony'
+
+--Update "GM Hummer" record
+UPDATE 
+  inventory
+SET 
+  inv_description = REPLACE(inv_description,'small interiors','a huge interior')
+WHERE 
+  inv_make = 'GM' and inv_model='Hummer'
+
+--Join Tables inventory and category for those vehicles with "sport" category
+SELECT
+  inv_make, inv_model,
+  inventory,
+  classification_name,
+  classification
+FROM
+  inventory
+INNER JOIN classification
+    ON inventory.classification_id = 2 and classification.classification_id = 2;
+
+--Update all records in the inventory table to add "/vehicles" to the middle of the file path in the inv_image
+UPDATE 
+  inventory
+SET 
+  inv_image = replace(inv_image, 'images', 'images/vehicles'),
+  inv_thumbnail = replace(inv_thumbnail, 'images', 'images/vehicles')
