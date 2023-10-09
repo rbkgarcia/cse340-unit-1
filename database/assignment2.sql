@@ -1,8 +1,6 @@
+--Create type as enum
 CREATE TYPE public.account_type AS ENUM
     ('Client', 'Employee', 'Admin');
-
-ALTER TYPE public.account_type
-    OWNER TO rebecag;
 
 --Table structure for table "clasification"
 CREATE TABLE public.classification (
@@ -247,7 +245,7 @@ VALUES (
   'Stark',
   'tony@starkent.com',
   'Iam1ronM@n'
-)
+);
 
 --Update account table Tony type of account
 UPDATE 
@@ -255,14 +253,14 @@ UPDATE
 SET 
 	account_type = 'Admin'
 WHERE 
-	account_firstname ='Tony'
+	account_firstname ='Tony';
 
 --Delete Tony record from account
 DELETE
 FROM
   account
 WHERE
-  account_firstname ='Tony'
+  account_firstname ='Tony';
 
 --Update "GM Hummer" record
 UPDATE 
@@ -270,7 +268,7 @@ UPDATE
 SET 
   inv_description = REPLACE(inv_description,'small interiors','a huge interior')
 WHERE 
-  inv_make = 'GM' and inv_model='Hummer'
+  inv_make = 'GM' and inv_model='Hummer';
 
 --Join Tables inventory and category for those vehicles with "sport" category
 SELECT
@@ -288,4 +286,4 @@ UPDATE
   inventory
 SET 
   inv_image = replace(inv_image, 'images', 'images/vehicles'),
-  inv_thumbnail = replace(inv_thumbnail, 'images', 'images/vehicles')
+  inv_thumbnail = replace(inv_thumbnail, 'images', 'images/vehicles');
